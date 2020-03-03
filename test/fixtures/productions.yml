@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  first_dress: 2020-03-02 17:47:01
+  strike: 2020-03-02 17:47:01
+
+two:
+  title: MyString
+  first_dress: 2020-03-02 17:47:01
+  strike: 2020-03-02 17:47:01
