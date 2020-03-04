@@ -7,9 +7,11 @@
       <%= link_to p.title, p %>
       <% theatre = @theatres.find_by id: (p.theatre_id) %>
       <%= theatre.name %>
-      <%=link_to "remove", production_path(p), :method=>'destroy'%>
     </li>
     <br>
   <% end %>
 </ul>
+
+<div> <%= link_to 'Create a new production', new_production_path%><br>
+<div> <%= link_to 'Home', costume_designers_index_path%><br>
 

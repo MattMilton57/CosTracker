@@ -1,6 +1,13 @@
 <div> Title: <%= @production.title %></div><br />
-<div> Costume Designer: <%= @production.costume_designer_id %></div><br />
-<div> Theatre: <%= @production.theatre_id %></div><br />
+<% cosdes = @costume_designers.find_by id: (@production.costume_designer_id) %>
+<div> Costume Designer: <%= cosdes.name%></div><br />
+<% theatre = @theatres.find_by id: (@production.theatre_id) %>
+<div> Theatre:  <%= theatre.name %>
 <% @production.costumes.each do |c| %>
     <li><%= c.color + " " + c.material + " " + c.costume_type %></li>
     <%end%>
+ <div> <%= link_to 'edit this production', edit_production_path%><br>
+ <%=link_to "delete this production", production_path, :method=>'delete'%><br>
+ <%= link_to 'Productions home', productions_path%><br>
+
+

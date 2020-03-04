@@ -5,6 +5,8 @@ class ProductionsController < ApplicationController
     end
 
     def show
+        @theatres = Theatre.all
+        @costume_designers = CostumeDesigner.all
         @production = Production.find_by_id(params[:id])
     end
 

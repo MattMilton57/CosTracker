@@ -1,6 +1,9 @@
 <h1>Costume Index </h1>
 
 <% @costumes.each do |c| %>
-    <li> Costume piece <%= link_to c.id, c %> </li>
+    <li> Costume piece <%= link_to c.costume_type, c %> </li>
  
     <%end%>
+
+    <div> <%= link_to 'Create a new costume piece', new_costume_path%><br>
+<div> <%= link_to 'Home', costume_designers_index_path%><br>

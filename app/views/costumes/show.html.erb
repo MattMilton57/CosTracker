@@ -4,3 +4,7 @@
 <div> color: <%= @costume.color %></div><br />
 <div> Shop location: <%= @costume.location %></div><br />
 <div> Description: <%= @costume.description %></div><br />
+
+<div> <%= link_to 'edit this costume piece', edit_costume_path%><br>
+<%=link_to "delete this costume", costume_path, :method=>'destroy'%><br>
+<%= link_to 'Costumes home', costumes_path%><br>
