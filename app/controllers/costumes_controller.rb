@@ -36,7 +36,10 @@ class CostumesController < ApplicationController
     end
 
     def destroy
-
+        @costume = Costume.find(params[:id])
+        @costume.destroy
+        flash[:messages] = "costume deleted"
+        redirect_to costumes_path
     end
     private
 
