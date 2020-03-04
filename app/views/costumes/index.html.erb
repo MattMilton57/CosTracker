@@ -1,0 +1,6 @@
+<h1>Costume Index </h1>
+
+<% @costumes.each do |c| %>
+    <li> Costume piece <%= link_to c.id, c %> </li>
+ 
+    <%end%>

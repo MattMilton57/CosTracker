@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_015151) do
+ActiveRecord::Schema.define(version: 2020_03_04_161614) do
 
   create_table "costume_designers", force: :cascade do |t|
     t.string "name"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2020_03_03_015151) do
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "description"
+    t.string "location"
   end
 
   create_table "production_costumes", force: :cascade do |t|

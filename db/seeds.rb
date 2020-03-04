@@ -14,7 +14,7 @@ ProductionCostume.destroy_all
 
 @costume_types = ['shirt', 'pants', 'hat', 'skirt', 'bodice', 'shoes', 'coat', 'vest', ]
 @costume_eras = ['Greek & Roman', 'Asian', 'Victorian', 'Elizabethan', 'Early 20th century', 'Mid 20th century','Modern casual','Modern formal', 'Fantasy' ]
-@costume_materials = ['cotton', 'paper mache', 'polyester', 'hemp', 'muslin', 'thule', 'lycra',  ]
+@costume_materials = ['cotton', 'paper mache', 'polyester', 'hemp', 'muslin', 'wool', 'thule', 'lycra',  ]
 
 cd1=CostumeDesigner.create(name:'Julie Taymor')
 cd2=CostumeDesigner.create(name:'Matt Milton')
@@ -25,13 +25,13 @@ t2=Theatre.create(name:'The Seattle Repertory Theatre')
 t3=Theatre.create(name:'The Oregon Shakespeare Festival')
 
 c1=Costume.create(costume_type:'skirt', era:'Restoration', material:'cotton', color:'red')
-c2=Costume.create(costume_type:'bodice', era:'Restoration', material:'cotton', color:'red')
-c3=Costume.create(costume_type:'hat', era:'Restoration', material:'cotton', color:'red')
+c2=Costume.create(costume_type:'bodice', era:'Restoration', material:'cotton', color:'blue')
+c3=Costume.create(costume_type:'hat', era:'Restoration', material:'wool', color:'red')
 c4=Costume.create(costume_type:'skirt', era:'Modern casual', material:'cotton', color:'red')
-c5=Costume.create(costume_type:'coat', era:'Modern formal', material:'cotton', color:'red')
+c5=Costume.create(costume_type:'coat', era:'Modern formal', material:'hemp', color:'green')
 c6=Costume.create(costume_type:'hat', era:'Modern casual', material:'cotton', color:'red')
 c7=Costume.create(costume_type:'coat', era:'Victorian', material:'cotton', color:'red')
-c8=Costume.create(costume_type:'toga', era:'Greek & Roman', material:'cotton', color:'red')
+c8=Costume.create(costume_type:'toga', era:'Greek & Roman', material:'cotton', color:'purple')
 c9=Costume.create(costume_type:'vest', era:'Early 20th century', material:'cotton', color:'red')
 c10=Costume.create(costume_type:'hat', era:'Fantasy', material:'Paper Mache', color:'brown')
 

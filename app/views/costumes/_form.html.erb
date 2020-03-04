@@ -1,0 +1,19 @@
+<%= form_for @costume do |c| %>
+    <%= c.label :costume_type, "Costume type: "%>
+    <%= c.collection_select :costume_type, @costume_types, :to_s, :to_s, include_blank: true%> <br>
+    <%= c.label :era, "Costume era: "%>
+    <%= c.collection_select :era, @costume_eras, :to_s, :to_s, include_blank: true%> <br>
+    <%= c.label :material, "Costume material: "%>
+    <%= c.collection_select :material, @costume_materials, :to_s, :to_s, include_blank: true%> <br>
+    <%= c.label :color, "Color" %>
+    <%= c.text_field :color%> <br>
+    <%= c.label :location, "Location" %>
+    <%= c.text_field :location%> <br>
+    <%= c.label :description, "Description" %>
+    <%= c.text_area :description%> <br>
+<%= c.submit %>
+       
+
+    <% end %>
+
+ 
