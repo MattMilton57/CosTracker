@@ -1,0 +1,6 @@
+<div> Title: <%= @production.title %></div><br />
+<div> Costume Designer: <%= @production.costume_designer_id %></div><br />
+<div> Theatre: <%= @production.theatre_id %></div><br />
+<% @production.costumes.each do |c| %>
+    <li><%= c.color + " " + c.material + " " + c.costume_type %></li>
+    <%end%>

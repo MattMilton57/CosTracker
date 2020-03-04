@@ -1,3 +1,4 @@
+require 'byebug'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -9,7 +10,11 @@ Production.destroy_all
 CostumeDesigner.destroy_all
 Theatre.destroy_all
 Costume.destroy_all
-ProductionsCostume.destroy_all
+ProductionCostume.destroy_all
+
+@costume_types = ['shirt', 'pants', 'hat', 'skirt', 'bodice', 'shoes', 'coat', 'vest', ]
+@costume_eras = ['Greek & Roman', 'Asian', 'Victorian', 'Elizabethan', 'Early 20th century', 'Mid 20th century','Modern casual','Modern formal', 'Fantasy' ]
+@costume_materials = ['cotton', 'paper mache', 'polyester', 'hemp', 'muslin', 'thule', 'lycra',  ]
 
 cd1=CostumeDesigner.create(name:'Julie Taymor')
 cd2=CostumeDesigner.create(name:'Matt Milton')
@@ -39,10 +44,10 @@ p4=Production.create(title:'A Funny Thing Happened on te Way to the Forum', cost
 p5=Production.create(title:'The Diary of Anne Frank', costume_designer_id:3, theatre_id:1)
 p6=Production.create(title:'Noises Off', costume_designer_id:2, theatre_id:2)
 
-ProductionsCostume.create(costume_id:c1.id , production_id:p6.id )
-ProductionsCostume.create(costume_id:c2.id , production_id:p6.id )
-ProductionsCostume.create(costume_id:c3.id , production_id:p5.id )
-ProductionsCostume.create(costume_id:c4.id , production_id:p4.id )
-ProductionsCostume.create(costume_id:c5.id , production_id:p3.id )
-ProductionsCostume.create(costume_id:c6.id , production_id:p3.id )
-ProductionsCostume.create(costume_id:c6.id , production_id:p1.id )
+ProductionCostume.create(costume_id:c1.id , production_id:p6.id )
+ProductionCostume.create(costume_id:c2.id , production_id:p6.id )
+ProductionCostume.create(costume_id:c3.id , production_id:p5.id )
+ProductionCostume.create(costume_id:c4.id , production_id:p4.id )
+ProductionCostume.create(costume_id:c5.id , production_id:p3.id )
+ProductionCostume.create(costume_id:c6.id , production_id:p3.id )
+ProductionCostume.create(costume_id:c6.id , production_id:p1.id )

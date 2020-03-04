@@ -29,19 +29,19 @@ ActiveRecord::Schema.define(version: 2020_03_03_015151) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "production_costumes", force: :cascade do |t|
+    t.integer "production_id"
+    t.integer "costume_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "productions", force: :cascade do |t|
     t.string "title"
     t.datetime "first_dress"
     t.datetime "strike"
     t.integer "costume_designer_id"
     t.integer "theatre_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "productions_costumes", force: :cascade do |t|
-    t.integer "production_id"
-    t.integer "costume_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

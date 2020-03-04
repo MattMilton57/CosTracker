@@ -1,0 +1,17 @@
+<%= form_for @production do |p| %>
+    <%= p.label :title, "Play Title: "%>
+    <%= p.text_field :title%> <br>
+    <%= p.label :first_dress, "First Dress Rehearsal Date: "%>
+    <%= p.text_field :first_dress%> <br>
+    <%= p.label :strike, "Strike Date: "%>
+    <%= p.text_field :strike%> <br>
+    <%= p.label :costume_designer_id, "Costume Designer: " %> 
+    <%= p.collection_select :costume_designer_id, @costume_designers, :id, :name, include_blank: true %><br>
+    <%= p.label :theatre_id, "Theatre: " %> 
+    <%= p.collection_select :theatre_id, @theatres, :id, :name, include_blank: true %><br>
+    <%= p.submit %>
+    <% end %>
+
+    <% if flash[:notice]%>
+    <%= flash[:notice] %>
+    <%end%>

@@ -1,2 +1,0 @@
-class TheatreController < ApplicationController
-end

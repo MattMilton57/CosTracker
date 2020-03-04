@@ -1,2 +1,0 @@
-class ProductionsCostumesController < ApplicationController
-end
