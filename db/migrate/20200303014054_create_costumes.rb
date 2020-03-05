@@ -6,7 +6,7 @@ class CreateCostumes < ActiveRecord::Migration[6.0]
       t.string :material
       t.string :color
       t.integer :barcode
-      t.string :image
+      t.string :image 
 
       t.timestamps
     end

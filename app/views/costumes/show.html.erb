@@ -4,6 +4,9 @@
 <div> color: <%= @costume.color %></div><br />
 <div> Shop location: <%= @costume.location %></div><br />
 <div> Description: <%= @costume.description %></div><br />
+<% if @costume.image? %>
+<%= image_tag(@costume.image)%>
+<%end%>
 
 <div> <%= link_to 'edit this costume piece', edit_costume_path%><br>
 <%=link_to "delete this costume", costume_path, :method=>'delete'%><br>
