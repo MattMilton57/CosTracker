@@ -2,7 +2,9 @@
 
 <% @costumes.each do |c| %>
     <li> Costume piece <%= link_to c.costume_type, c %> </li>
- 
+    <% if c.image? %>
+    <%= image_tag(c.image)%>
+    <%end%>
     <%end%>
 
     <div> <%= link_to 'Create a new costume piece', new_costume_path%><br>
