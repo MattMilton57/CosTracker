@@ -1,14 +1,15 @@
-<l1>Welcome to CosTracker</l1> <br>
-<% if logged_in? %>
+<h1>Welcome</h1>
 
+<% if logged_in? %>
+     
     <h1> You are logged in, <%= current_user.username %></h1>
     <%= button_to "Log Out", '/logout', method: :delete%>
     <%= link_to 'Browse costumes', costumes_path%><br>
     <%= link_to 'view productions', productions_path%><br>
-    <%else%>
-    <h1> Please log in or sign up. </h1>
-    <%= button_to "Login", '/login', method: :get%>
-    <%= button_to "Sign Up", '/users/new', method: :get%>
+<%else%>
+<h1> Please log in</h1>
+<%= button_to "Login", '/login', method: :get%>
+<%= button_to "Sign Up", '/users/new', method: :get%>
 <% end %>
 
 

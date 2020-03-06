@@ -7,13 +7,19 @@
     <%= c.collection_select :material, @costume_materials, :to_s, :to_s, include_blank: true%> <br>
     <%= c.label :color, "Color" %>
     <%= c.text_field :color%> <br>
-    <%= c.label :location, "Location" %>
+    <%= c.label :location, "Shop Location" %>
     <%= c.text_field :location%> <br>
     <%= c.label :description, "Description" %>
     <%= c.text_area :description%> <br>
-<%= c.submit %>
-       
+        <% if @shows.length > 0 %>
+            <%= c.label :add_to_show, "Add to show: " %>
+            <%=c.collection_select :production_ids, @shows, :id, :title%> <br>
+        <%end%>
+    <%= c.submit %><br>
 
+    <% if @costume.image? %>
+<%= image_tag(@costume.image)%>
+<%end%>
     <% end %>
 
  

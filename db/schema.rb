@@ -10,13 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_04_212905) do
-
-  create_table "costume_designers", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 2020_03_05_155500) do
 
   create_table "costumes", force: :cascade do |t|
     t.string "costume_type"
@@ -43,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_03_04_212905) do
     t.string "title"
     t.datetime "first_dress"
     t.datetime "strike"
-    t.integer "costume_designer_id"
+    t.integer "user_id"
     t.integer "theatre_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -51,6 +45,13 @@ ActiveRecord::Schema.define(version: 2020_03_04_212905) do
 
   create_table "theatres", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

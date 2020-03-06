@@ -7,7 +7,6 @@ require 'byebug'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Production.destroy_all
-CostumeDesigner.destroy_all
 Theatre.destroy_all
 Costume.destroy_all
 ProductionCostume.destroy_all
@@ -16,9 +15,6 @@ ProductionCostume.destroy_all
 @costume_eras = ['Greek & Roman', 'Asian', 'Victorian', 'Elizabethan', 'Early 20th century', 'Mid 20th century','Modern casual','Modern formal', 'Fantasy' ]
 @costume_materials = ['cotton', 'paper mache', 'polyester', 'hemp', 'muslin', 'wool', 'thule', 'lycra',  ]
 
-cd1=CostumeDesigner.create(name:'Julie Taymor')
-cd2=CostumeDesigner.create(name:'Matt Milton')
-cd3=CostumeDesigner.create(name:'Ruth Carter')
 
 t1=Theatre.create(name:'Central Washington University')
 t2=Theatre.create(name:'The Seattle Repertory Theatre')
@@ -37,12 +33,12 @@ c10=Costume.create(costume_type:'hat', era:'Fantasy', material:'Paper Mache', co
 
 
 
-p1=Production.create(title:'MacBeth', costume_designer_id:1, theatre_id:1)
-p2=Production.create(title:'A Thousand Cranes', costume_designer_id:2, theatre_id:1)
-p3=Production.create(title:'The Odd Couple', costume_designer_id:3, theatre_id:3)
-p4=Production.create(title:'A Funny Thing Happened on te Way to the Forum', costume_designer_id:2, theatre_id:3)
-p5=Production.create(title:'The Diary of Anne Frank', costume_designer_id:3, theatre_id:1)
-p6=Production.create(title:'Noises Off', costume_designer_id:2, theatre_id:2)
+p1=Production.create(title:'MacBeth', theatre_id:1)
+p2=Production.create(title:'A Thousand Cranes', theatre_id:1)
+p3=Production.create(title:'The Odd Couple', theatre_id:3)
+p4=Production.create(title:'A Funny Thing Happened on te Way to the Forum', theatre_id:3)
+p5=Production.create(title:'The Diary of Anne Frank', theatre_id:1)
+p6=Production.create(title:'Noises Off', theatre_id:2)
 
 ProductionCostume.create(costume_id:c1.id , production_id:p6.id )
 ProductionCostume.create(costume_id:c2.id , production_id:p6.id )

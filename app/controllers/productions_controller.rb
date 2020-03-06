@@ -17,7 +17,9 @@ class ProductionsController < ApplicationController
     end
 
     def create 
-        @production = Production.create(production_params)
+        @production = Production.new(production_params)
+        @production.user = current_user
+        @production.save
         redirect_to @production
     end
 
